@@ -4,11 +4,13 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { SurveyApiService } from './service/survey-api.service';
 
+import { Role } from 'src/app/shared/enum/role.enum';
 import { Result } from './model/result.model';
 import { SurveyInfo } from './model/surveyInfo.model';
 import { DialogComponent } from './dialog/dialog.component';
 
 const Surveys = 'Surveys';
+const Roles = 'role';
 
 @Component({
   selector: 'app-survey',
@@ -45,5 +47,14 @@ export class SurveyComponent implements OnInit {
   sideBarOpen = true;
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
+  }
+  //
+  get isQualityControl(): boolean
+  {
+    return this.getUserRole() === Role.QualityControl;
+  }
+  //
+  getUserRole(): string{
+    return window.sessionStorage.getItem(Roles);
   }
 }
