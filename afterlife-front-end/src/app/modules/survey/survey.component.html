@@ -10,14 +10,14 @@
 
             <nav class="navbar navbar-light bg-primary">
                 <div class="container-fluid">
-                    <h1 style="color: aliceblue;">Страница с опросами</h1>
+                    <h1 style="color: aliceblue;">Страница с опросами(Create by only QualityControl)</h1>
                 </div>
             </nav>
         
             <div class="tab-content mt-3" id="myTabContent">
                 <div class="mb-3 float-right">
                     <div class="btn-group mr-2">
-                        <button type="button" class="btn btn-info" data-toggle="modal" mat-button (click)="openDialog()">
+                        <button [hidden]="!isQualityControl" type="button" class="btn btn-info" data-toggle="modal" mat-button (click)="openDialog()">
                         <i class="fa fa-plus"></i>New Survey
                         </button>
                     </div>
