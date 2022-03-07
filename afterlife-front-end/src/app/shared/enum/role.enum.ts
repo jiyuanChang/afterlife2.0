@@ -3,5 +3,6 @@ export enum Role {
     God = 'GOD',
     Devil = 'DEVIL',
     Heaven_Advocate = 'HEAVEN_ADVOCATE',
-    Heaven_Prosecutor = 'HEAVEN_PROSECUTOR'
+    Heaven_Prosecutor = 'HEAVEN_PROSECUTOR',
+    QualityControl = 'QUALITY_CONTROL'
 }
